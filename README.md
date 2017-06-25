@@ -1,2 +1,3 @@
 # BPlusTree
-Implementação da árvore B+ em python
+Comparação de duas tabelas do programa Bolsa Familia usando força bruta. busca binária, tabela hash e árvore b+.
+Os programas irão exibir a quantidade de entradas que existem nas duas tabelas, a quantidade de entradas únicas a cada tabela, a quantidade de acessos realizados para cada comparação e o tempo de execução.
