@@ -3,9 +3,9 @@ import hashlib
 import os
 from time import time
 
-
 ti = time()
-hashSize = 15000001
+
+hashSize = 13601897
 fileName = "data/BolsaFamiliaJan.dat"
 indexName = "data/BolsaFamiliaJan-hash.dat"
 dataFormat = "2s30s14s50s6s2s"
@@ -35,12 +35,12 @@ print "IndexFileSize", fileIndexSize
 
 recordNumber = 0
 while True:
+    if recordNumber%136017 == 0:
+        print(str(recordNumber // 136017) + "%")
     line = f.read(dataStruct.size)
     if line == "": # EOF
         break
 
-    if recordNumber%1000000 == 0:
-        print recordNumber
     record = dataStruct.unpack(line)
     p = h(record[keyColumnIndex])
     fi.seek(p*indexStruct.size,os.SEEK_SET)
@@ -58,4 +58,4 @@ while True:
 f.close()
 fi.close()
 
-print(time()-ti)
+print time() - ti
