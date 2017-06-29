@@ -3,10 +3,13 @@ import hashlib
 import os
 from time import time
 
+"""Acessa cada entradada da tabela de janeiro e usa o método de busca hash em
+na tabela de fevereiro para checar se a mesma entrada existe nesta tabela."""
+
 ti = time()
-hashSize = 1000003
-fileName = "data/BolsaFamiliaFev.dat"
-indexName = "data/BolsaFamiliaJan-hash.dat"
+hashSize = 13693919
+fileName = "data/BolsaFamiliaJan.dat"
+indexName = "data/BolsaFamiliaFev-hash.dat"
 dataFormat = "2s30s14s50s6s2s"
 indexFormat = "14sLL"
 keyColumnIndex = 2
@@ -27,8 +30,8 @@ line = f.read(dataStruct.size)
 
 while line != b'':
     i += 1
-    if i%10000 == 0:
-        print str(i / 10000) + "%"
+    if i%136017 == 0:
+        print(i)
     data = dataStruct.unpack(line)
     fi = open(indexName,"rb")
     p = h(data[2])
@@ -48,9 +51,9 @@ while line != b'':
     line = f.read(dataStruct.size)
     fi.close()
 
-print "Media de acessos: ", totalAcessos / float(1000000)
 print "Quantidade de registros que existem nas duas tabelas: ", existem
-print "Quantidade de registros que so existem na tabela de fevereiro: ", naoExistem
+print "Quantidade de registros que so existem na tabela de janeiro: ", naoExistem
+print "Media de acessos: ", totalAcessos / float(136017)
 tf = time()
 tt = tf - ti
 print tt

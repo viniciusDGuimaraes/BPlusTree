@@ -3,11 +3,13 @@ import hashlib
 import os
 from time import time
 
+"""Indexa a tabela de fevereiro em uma tabela hash."""
+
 ti = time()
 
-hashSize = 13601897
-fileName = "data/BolsaFamiliaJan.dat"
-indexName = "data/BolsaFamiliaJan-hash.dat"
+hashSize = 13693919
+fileName = "data/BolsaFamiliaFev.dat"
+indexName = "data/BolsaFamiliaFev-hash.dat"
 dataFormat = "2s30s14s50s6s2s"
 indexFormat = "14sLL"
 keyColumnIndex = 2
@@ -35,8 +37,6 @@ print "IndexFileSize", fileIndexSize
 
 recordNumber = 0
 while True:
-    if recordNumber%136017 == 0:
-        print(str(recordNumber // 136017) + "%")
     line = f.read(dataStruct.size)
     if line == "": # EOF
         break
