@@ -1,10 +1,10 @@
+"""Acessa cada entradada da tabela de janeiro e usa o método de busca hash em
+na tabela de fevereiro para checar se a mesma entrada existe nesta tabela."""
+
 import struct
 import hashlib
 import os
 from time import time
-
-"""Acessa cada entradada da tabela de janeiro e usa o método de busca hash em
-na tabela de fevereiro para checar se a mesma entrada existe nesta tabela."""
 
 ti = time()
 hashSize = 13693919

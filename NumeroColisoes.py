@@ -1,7 +1,7 @@
+"""Confere o número de colisões no arquivo hash de fevereiro"""
+
 import struct
 import hashlib
-
-"""Confere o número de colisões no arquivo hash de fevereiro"""
 
 hashSize = 13693919
 fileName = "data/BolsaFamiliaFev.dat"

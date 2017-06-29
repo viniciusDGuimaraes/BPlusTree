@@ -1,11 +1,13 @@
 #! /usr/bin/python3
 
+"""Separa a tabela de fevereiro em arquivos com 100.000 linhas e depois faz o
+merge externo desses arquivos, resultando em um único arquivo ordenado pelo
+NIS"""
+
 import struct
 import os
 from operator import itemgetter
 from time import time
-
-"""Faz o merge externo da tabela de fevereiro"""
 
 ti = time()
 estrutura = '2s30s14s50s6s2s'

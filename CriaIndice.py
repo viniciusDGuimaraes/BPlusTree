@@ -1,9 +1,9 @@
+"""Indexa a tabela de fevereiro em uma tabela hash."""
+
 import struct
 import hashlib
 import os
 from time import time
-
-"""Indexa a tabela de fevereiro em uma tabela hash."""
 
 ti = time()
 
