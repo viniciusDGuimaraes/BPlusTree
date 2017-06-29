@@ -3,7 +3,11 @@
 import struct
 import os
 from operator import itemgetter
+from time import time
 
+"""Faz o merge externo da tabela de fevereiro"""
+
+ti = time()
 estrutura = '2s30s14s50s6s2s'
 s = struct.Struct(estrutura)
 f = open('data/BolsaFamiliaFev.dat', 'rb')
@@ -137,3 +141,5 @@ while n != 1 or os.path.isfile('BolsaFamiliaFev' + str(n + 1) + '.dat'):
 
 		#Reseta o contador para apontar para o primeiro arquivo
 		n = 1
+
+print(time() - ti)
