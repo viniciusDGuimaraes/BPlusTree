@@ -1,13 +1,14 @@
 #! /usr/bin/python3
 
+"""Converte os arquivos CSV em arquivos dat"""
+
 import struct
 import csv
 from time import time
 import cProfile
 
-"""Converte os arquivos CSV em arquivos dat"""
-
 ti = time()
+primeiraLinha = True
 #Define o formato da estrutura
 estrutura = '2s30s14s50s6s2s'
 
@@ -24,12 +25,9 @@ r = csv.reader(f)
 i = 1
 
 for linha in r:
-	if i == 1:
-		i += 1
+	if primeiraLinha:
+		primeiraLinha = False
 		continue
-
-	if i%1000000 == 0:
-		print(i)
 
 	i += 1
 
@@ -57,15 +55,12 @@ f = open('201702_BolsaFamiliaFolhaPagamento.csv', encoding = 'cp1252')
 t = open('BolsaFamiliaFev.dat', 'wb')
 r = csv.reader(f)
 
-i = 1
+primeiraLinha = True
 
 for linha in r:
-	if i == 1:
-		i += 1
+	if primeiraLinha:
+		primeiraLinha = False
 		continue
-
-	if i%1000000 == 0:
-		print(i)
 
 	i += 1
 
