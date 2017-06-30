@@ -1,4 +1,5 @@
 # Relatório
+
     As duas tabelas vem originalmente no formato csv, para facilitar a manipulação dos seus dados o programa leCSV.py foi usado para converter os arquivos csv em dat, nessa conversão apenas os campos UF, nome do município, NIS favorecido, nome favorecido e valor parcela foram considerados.
 
     Os testes foram realizados com duas versões das tabelas, uma reduzida, com 1.000.000 de entradas para cada, e uma com todas as entradas das tabelas de janeiro e fevereiro, com 13.601.764 e 13.693.912 entradas respectivamente.
@@ -6,6 +7,7 @@
 ## Resultado dos testes
 ### Conversão
 Usando o módulo cProfile foram obtidas essas informações:
+
     Tabela de janeiro reduzida:![cProfileJan1](https://raw.githubusercontent.com/viniciusDGuimaraes/BPlusTree/master/Testes/Reduzidos/Convers%C3%A3o/cProfile_jan_01.png)![cProfileJan2](https://raw.githubusercontent.com/viniciusDGuimaraes/BPlusTree/master/Testes/Reduzidos/Convers%C3%A3o/cProfile_jan_02.png)![cProfileJan3](https://raw.githubusercontent.com/viniciusDGuimaraes/BPlusTree/master/Testes/Reduzidos/Convers%C3%A3o/cProfile_jan_03.png)
 
     Tabela de fevereiro reduzida:![cProfileFev1](https://raw.githubusercontent.com/viniciusDGuimaraes/BPlusTree/master/Testes/Reduzidos/Convers%C3%A3o/cProfile_fev_01.png)![cProfileFev2](https://raw.githubusercontent.com/viniciusDGuimaraes/BPlusTree/master/Testes/Reduzidos/Convers%C3%A3o/cProfile_fev_02.png) ![cProfileFev3](https://raw.githubusercontent.com/viniciusDGuimaraes/BPlusTree/master/Testes/Reduzidos/Convers%C3%A3o/cProfile_fev_03.png)
