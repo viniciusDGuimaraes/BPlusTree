@@ -53,12 +53,14 @@ Para indexar o arquivo 'BolsaFamiliaFev.dat' foi usado o programa CriaIndice.py,
 A indexação do arquivo reduzido levou 12.1 segundos, e a indexação do arquivo completo levou 1 hora, 7 minutos e 45 segundos.
 
 Os resultados da busca com tabela hash usando os arquivos reduzidos foram:
+
 ..* 994.174 entradas iguais;
 ..* 5.826 entradas únicas na tabela de janeiro;
 ..* 1,497 acessos em média;
 ..* 18 segundos de tempo de execução.
 
 Os resultados da busca com tabela hash usando os arquivos completos foram:
+
 ..* 13.522.298 entradas iguais;
 ..* 79.466 entradas únicas na tabela de janeiro;
 ..* 1,496 acessos em média;
